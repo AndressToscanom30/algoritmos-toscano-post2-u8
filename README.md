@@ -154,14 +154,14 @@ Almacén con control de concurrencia optimista basado en versiones, simulando ET
 
 ### Resultados
 
-| cacheSize | Benchmark | Avg (ops/ms) | Min (ops/ms) | Max (ops/ms) |
-|---|---|---|---|---|
-| 100 | withCache | 7,660.53 | 7,613.58 | 7,707.19 |
-| 100 | withoutCache | 17,471.90 | 17,337.60 | 17,695.52 |
-| 1000 | withCache | 5,800.04 | 5,633.79 | 5,864.10 |
-| 1000 | withoutCache | 14,338.88 | 13,747.34 | 14,930.25 |
-| 10000 | withCache | 3,339.17 | 3,241.95 | 3,387.69 |
-| 10000 | withoutCache | 6,382.94 | 6,037.19 | 6,653.78 |
+| Benchmark                         | cacheSize | Mode  | Cnt | Score     | Error      | Units  |
+|----------------------------------|----------:|-------|----:|----------:|-----------:|--------|
+| CacheBenchmark.withCache         |       100 | thrpt |   5 | 11678,223 | ± 1007,147 | ops/ms |
+| CacheBenchmark.withCache         |      1000 | thrpt |   5 | 11768,756 | ± 1289,896 | ops/ms |
+| CacheBenchmark.withCache         |     10000 | thrpt |   5 |  2512,421 | ± 2163,725 | ops/ms |
+| CacheBenchmark.withoutCache      |       100 | thrpt |   5 | 44826,533 | ± 21627,313| ops/ms |
+| CacheBenchmark.withoutCache      |      1000 | thrpt |   5 | 32783,810 | ± 5454,048 | ops/ms |
+| CacheBenchmark.withoutCache      |     10000 | thrpt |   5 |  7691,695 | ± 2576,502 | ops/ms |
 
 ### Análisis
 
@@ -239,4 +239,4 @@ Se cubren los 4 checkpoints del laboratorio:
 - **WriteThroughCache:** 8 hilos × 200 ops, verificación de consistencia cache-repo
 - **OptimisticStore:** 10 hilos × 50 incrementos con retry pattern, verificación de contador final
 
-**Total de tests:** 27 (todos pasan)
+**Total de tests:** 29 (todos pasan)

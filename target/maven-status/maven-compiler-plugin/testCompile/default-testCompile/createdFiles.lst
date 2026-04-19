@@ -1,0 +1,4 @@
+cache\OptimisticStoreTest.class
+cache\LRUCacheTest.class
+cache\WriteBehindCacheTest.class
+cache\WriteThroughCacheTest.class
